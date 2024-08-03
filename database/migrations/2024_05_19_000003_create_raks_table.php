@@ -6,23 +6,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
-        Schema::create('rak', function (Blueprint $table) {
-            $table->id();
+        Schema::create('raks', function (Blueprint $table) {
+            $table->increments('kd_rak');
             $table->string('lokasi', 150);
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('rak');
+        Schema::dropIfExists('raks');
     }
 };

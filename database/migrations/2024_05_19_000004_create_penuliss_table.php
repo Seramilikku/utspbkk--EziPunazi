@@ -6,13 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
-        Schema::create('penulis', function (Blueprint $table) {
-            $table->id();
+        Schema::create('penuliss', function (Blueprint $table) {
+            $table->increments('kd_penulis')->primary();
             $table->string('nama_penulis', 150);
             $table->string('tempat_lahir', 100);
             $table->date('tgl_lahir');
@@ -21,10 +18,7 @@ return new class extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('penulis');
     }
