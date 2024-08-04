@@ -60,4 +60,5 @@ class AnggotaController extends Controller
 
         return redirect()->route('anggotas.index')->with('success', 'Anggota berhasil dihapus!');
     }
+    
 }

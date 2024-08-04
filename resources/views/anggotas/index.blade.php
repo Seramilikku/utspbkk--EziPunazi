@@ -28,7 +28,7 @@
                 <td>
                     <a href="{{ route('anggotas.show', $anggota->id_peminjaman) }}" class="btn btn-info btn-sm">Detail</a>
                     <a href="{{ route('anggotas.edit', $anggota->id_peminjaman) }}" class="btn btn-primary btn-sm">Edit</a>
-                    <form action="{{ route('anggotas.destroy', $anggota->id_peminjaman) }}" method="POST" style="display: inline;">
+                    <form action="{{ route('anggotas.destroy', $anggota->id_peminjaman) }}" method="POST" style="display: inline">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus anggota ini?')">Hapus</button>

@@ -1,172 +1,1168 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+<!doctype html>
+<html lang="en-US">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.absolute{position:absolute}.relative{position:relative}.-left-20{left:-5rem}.top-0{top:0px}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-mx-3{margin-left:-0.75rem;margin-right:-0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-\[calc\(100\%\+8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.max-w-\[877px\]{max-width:877px}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.bg-\[\#FF2D20\]\/10{background-color:rgb(255 45 32 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#FF2D20}.object-cover{object-fit:cover}.object-top{object-position:top}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:0.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-semibold{font-weight:600}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0px 14px 34px 0px rgba(0,0,0,0.08);--tw-shadow-colored:0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-transparent{--tw-ring-color:transparent}.ring-white\/\[0\.05\]{--tw-ring-color:rgb(255 255 255 / 0.05)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-black\/70:hover{color:rgb(0 0 0 / 0.7)}.hover\:ring-black\/20:hover{--tw-ring-color:rgb(0 0 0 / 0.2)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}@media (min-width: 640px){.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:text-\[\#FF2D20\]{--tw-text-opacity:1;color:rgb(255 45 32 / var(--tw-text-opacity))}}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.dark\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity))}.dark\:via-zinc-900{--tw-gradient-to:rgb(24 24 27 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to:#18181b var(--tw-gradient-to-position)}.dark\:text-white\/50{color:rgb(255 255 255 / 0.5)}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-white\/70{color:rgb(255 255 255 / 0.7)}.dark\:ring-zinc-800{--tw-ring-opacity:1;--tw-ring-color:rgb(39 39 42 / var(--tw-ring-opacity))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:hover\:text-white\/70:hover{color:rgb(255 255 255 / 0.7)}.dark\:hover\:text-white\/80:hover{color:rgb(255 255 255 / 0.8)}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity:1;--tw-ring-color:rgb(63 63 70 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))}}
-        </style>
-    </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
+	<!-- This site is optimized with the Yoast SEO plugin v23.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home | Greenwich Library</title>
+	<meta name="description" content="Greenwich Library located at 101 W Putnam Ave. Learn more about the offerings to the community including collections, events, and resources." />
+	<link rel="canonical" href="https://www.greenwichlibrary.org/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home | Greenwich Library" />
+	<meta property="og:description" content="Greenwich Library located at 101 W Putnam Ave. Learn more about the offerings to the community including collections, events, and resources." />
+	<meta property="og:url" content="https://www.greenwichlibrary.org/" />
+	<meta property="og:site_name" content="Greenwich Library" />
+	<meta property="article:publisher" content="http://www.facebook.com/GreenwichLibrary" />
+	<meta property="article:modified_time" content="2024-08-02T17:42:41+00:00" />
+	<meta property="og:image" content="https://www.greenwichlibrary.org/wp-content/uploads/2024/06/GRT-Web-Banner-James.png" />
+	<meta property="og:image:width" content="2560" />
+	<meta property="og:image:height" content="1000" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@GWLibrary" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.greenwichlibrary.org/","url":"https://www.greenwichlibrary.org/","name":"Home | Greenwich Library","isPartOf":{"@id":"https://www.greenwichlibrary.org/#website"},"about":{"@id":"https://www.greenwichlibrary.org/#organization"},"primaryImageOfPage":{"@id":"https://www.greenwichlibrary.org/#primaryimage"},"image":{"@id":"https://www.greenwichlibrary.org/#primaryimage"},"thumbnailUrl":"https://www.greenwichlibrary.org/wp-content/uploads/2024/06/GRT-Web-Banner-James.png","datePublished":"2016-02-04T23:51:14+00:00","dateModified":"2024-08-02T17:42:41+00:00","description":"Greenwich Library located at 101 W Putnam Ave. Learn more about the offerings to the community including collections, events, and resources.","breadcrumb":{"@id":"https://www.greenwichlibrary.org/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.greenwichlibrary.org/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.greenwichlibrary.org/#primaryimage","url":"https://www.greenwichlibrary.org/wp-content/uploads/2024/06/GRT-Web-Banner-James.png","contentUrl":"https://www.greenwichlibrary.org/wp-content/uploads/2024/06/GRT-Web-Banner-James.png","width":2560,"height":1000},{"@type":"BreadcrumbList","@id":"https://www.greenwichlibrary.org/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.greenwichlibrary.org/#website","url":"https://www.greenwichlibrary.org/","name":"Greenwich Library","description":"The Intersection of Knowledge and People in Greenwich, CT","publisher":{"@id":"https://www.greenwichlibrary.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.greenwichlibrary.org/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.greenwichlibrary.org/#organization","name":"Greenwich Library","url":"https://www.greenwichlibrary.org/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.greenwichlibrary.org/#/schema/logo/image/","url":"https://www.greenwichlibrary.org/wp-content/uploads/2021/11/main-logo-green.svg","contentUrl":"https://www.greenwichlibrary.org/wp-content/uploads/2021/11/main-logo-green.svg","width":69,"height":48,"caption":"Greenwich Library"},"image":{"@id":"https://www.greenwichlibrary.org/#/schema/logo/image/"},"sameAs":["http://www.facebook.com/GreenwichLibrary","https://x.com/GWLibrary","http://www.instagram.com/gwlibrary","http://www.youtube.com/channel/UCXZNfQBttPvWPUBXs8L5dvw","https://www.tiktok.com/@gwlibrary"]}]}</script>
+	<meta name="google-site-verification" content="m1Q5lGOIorDAgG-VGEZD5zQdd-ogm9Vc7ze1SpWA6fU" />
+	<!-- / Yoast SEO plugin. -->
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
 
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
-                                </div>
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.greenwichlibrary.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.5.5"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<link rel='stylesheet' id='sage/css-css' href='https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/dist/styles/main.css' type='text/css' media='all' />
+<link rel='stylesheet' id='adjustment-style-css' href='https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/adjustments.css?ver=6.5.5' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
 
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
-                                        </div>
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.greenwichlibrary.org/wp-includes/css/dist/block-library/style.min.css?ver=6.5.5' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='searchandfilter-css' href='https://www.greenwichlibrary.org/wp-content/plugins/search-filter/style.css?ver=1' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.greenwichlibrary.org/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=7.8' type='text/css' media='all' />
+<script type="text/javascript" id="jquery-core-js-extra">
+/* <![CDATA[ */
+var common_config = {"site_url":"https:\/\/www.greenwichlibrary.org","template_url":"https:\/\/www.greenwichlibrary.org\/wp-content\/themes\/greenwich-sage","child_template_url":"https:\/\/www.greenwichlibrary.org\/wp-content\/themes\/greenwich-sage","current_page_title":"","current_page_url":"","admin_ajax":"https:\/\/www.greenwichlibrary.org\/wp-admin\/admin-ajax.php","current_id":null};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js?ver=6.5.5" id="jquery-ui-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js?ver=6.5.5" id="bxslider-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/scripts/breadcrumbs.js?ver=6.5.5" id="breadcrumbs-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/scripts/forms.js?ver=6.5.5" id="forms-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/js/common.js?ver=6.5.5" id="commonjs-js"></script>
+<script></script><link rel="https://api.w.org/" href="https://www.greenwichlibrary.org/wp-json/" /><link rel="alternate" type="application/json" href="https://www.greenwichlibrary.org/wp-json/wp/v2/pages/10" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.greenwichlibrary.org/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.greenwichlibrary.org/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.greenwichlibrary.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenwichlibrary.org%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.greenwichlibrary.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.greenwichlibrary.org%2F&#038;format=xml" />
+<link rel="preload" as="style" onload="this.rel = 'stylesheet'" href="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/fonts/605744/3E259BC98E672E61C.css" crossorigin>
+<meta name="cdp-version" content="1.4.8" /><meta name="generator" content="Site Kit by Google 1.132.0" />
+		<script>
+		(function(h,o,t,j,a,r){
+			h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+			h._hjSettings={hjid:3891893,hjsv:5};
+			a=o.getElementsByTagName('head')[0];
+			r=o.createElement('script');r.async=1;
+			r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+		</script>
+		<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
 
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script type="text/javascript">
+/* <![CDATA[ */
 
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
-                                        </div>
-                                    </div>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-TVNPHRC8' );
+			
+/* ]]> */
+</script>
 
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                                </div>
-                            </a>
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<link rel="icon" href="https://www.greenwichlibrary.org/wp-content/uploads/2021/11/main-logo-green.svg" sizes="32x32" />
+<link rel="icon" href="https://www.greenwichlibrary.org/wp-content/uploads/2021/11/main-logo-green.svg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.greenwichlibrary.org/wp-content/uploads/2021/11/main-logo-green.svg" />
+<meta name="msapplication-TileImage" content="https://www.greenwichlibrary.org/wp-content/uploads/2021/11/main-logo-green.svg" />
+		<style type="text/css" id="wp-custom-css">
+			.bx-wrapper{position:relative;}
+.bx-wrapper .bx-prev{left:-20px;background:url(https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/controls.png) 0 -32px no-repeat}
+.bx-wrapper .bx-prev:focus,.bx-wrapper .bx-prev:hover{background-position:0 0}
+.bx-wrapper .bx-next{right:-20px;background:url(https://greenwichstag.wpengine.com/wp-content/themes/greenwich-sage/assets/images/controls.png) -43px -32px no-repeat}
+.bx-wrapper .bx-next:focus,.bx-wrapper .bx-next:hover{background-position:-43px 0}
+.bx-wrapper .bx-controls-direction a{position:absolute;top:50%;margin-top:-16px;outline:0;width:32px;height:32px;text-indent:-9999px;z-index:1}
 
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
-                                </div>
+.module a.biblio-cta {
+   margin-bottom:0px;
+	 right: 0px;
+}
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
+@media (min-width: 1200px){
+	.slider-holder {
+		padding: 0 60px;
+	}
+}
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+@media (max-width: 768px){
+	.module a.biblio-cta {
+    margin-bottom: 0px;
+    right: 85px;
+	}
+}
 
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
+/**global changes css**/
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
+h1, h2, h3, h4, h5, h6, p, ol li, ul li {
+	color: #303030 !important;
+}
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
+.vc_row-has-fill h1,
+.vc_row-has-fill h2,
+.vc_row-has-fill h3,
+.vc_row-has-fill h4,
+.vc_row-has-fill h5,
+.vc_row-has-fill p,
+.author-quote.home-main p,
+.author-quote.home-main h1,
+.author-quote.home-main h2,
+.author-quote.home-main h3,
+.author-quote.home-main h4,
+.author-quote.home-main h5,
+.home-main.newsletter h1,
+.home-main.newsletter h2,
+.home-main.newsletter h3,
+.home-main.newsletter h4,
+.home-main.newsletter h5,
+.home-main.newsletter p,
+.donate.home-main p,
+.donate.home-main h1,
+.donate.home-main h2,
+.donate.home-main h3,
+.donate.home-main h4,
+.donate.home-main h5,
+.menu-feature-wrapper .menu-feature p,
+.menu-feature-wrapper .menu-feature h1,
+.menu-feature-wrapper .menu-feature h2,
+.menu-feature-wrapper .menu-feature h3,
+.menu-feature-wrapper .menu-feature h4,
+.menu-feature-wrapper .menu-feature h5,
+.learn h4,
+.copyright p,
+.subnav-menu-wrapper .menu-instructions p,
+.blog-menu-wrapper .menu-instructions p,
+.about p, .about h6, .about h2,
+.author-quote .quote-container p, .author-quote .quote-container h3 {
+	color: #fff !important;
+}
 
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
+body.page-template-internal_standard .wrap.container .main .standard-internal-wrapper .row .standard-internal-content .contact p, body.page-template-internal_standard .wrap.container .main .standard-internal-wrapper .row .standard-internal-content .location p, body.page-template-internal_standard .wrap.container .main .standard-internal-wrapper .row .standard-internal-content .regular-hours p,
+.standard-subnav-wrapper .row .standard-subnav-content .contact p, .standard-subnav-wrapper .row .standard-subnav-content .location p, .standard-subnav-wrapper .row .standard-subnav-content .regular-hours p {
+  font-size: 16px;
+}
+@media (max-width: 1199px) {
+	p a.utility, p span.utility, p.utility, p a.utility a, p span.utility a, p.utility a, .anchor-size, a, p, .vc_tta-panel .vc_tta-panel-heading h4 a .vc_tta-title-text {
+		font-size: 15px;
+	}
+}
 
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
+.header-landing .nav-secondary .navbar-brand p, .navbar-brand .main-logo-text, .mobile-menu a.mobile-brand .mobile-brand-text {
+  color: #019875 !important;
+}
 
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
+.header-landing .search-box.shown .search-header .search-logo .navbar-brand .search-logo-text, .header-other .search-box.shown .search-header .search-logo .navbar-brand .search-logo-text {
+	color: #fff !important;
+}
 
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
 
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </footer>
-                </div>
+/**GRAVITY FORM**/
+#greenwich-forms .display-form h2.gform_title {
+        font-size: 78px;
+    line-height: 81px;
+}
+
+#greenwich-forms .display-form span.gform_description {
+    font-family: "Gotham SSm A","Gotham SSm B" !important;
+    font-size: 18px;
+    line-height: 35px;
+}
+
+#greenwich-forms .gform_fileupload_rules, #greenwich-forms .gfield_description,
+#greenwich-forms .ginput_container.ginput_container_consent label {
+    font-family: "Gotham SSm A","Gotham SSm B" !important;
+    font-size: 15px;
+    font-weight: normal;
+    display: inline;
+}
+
+#greenwich-forms .gform_fields input[type="checkbox"] {height: unset !important;}
+
+.gform_wrapper.gravity-theme .gfield_label, .gform_wrapper.gravity-theme input[type=color], .gform_wrapper.gravity-theme input[type=date], .gform_wrapper.gravity-theme input[type=datetime-local], .gform_wrapper.gravity-theme input[type=datetime], .gform_wrapper.gravity-theme input[type=email], .gform_wrapper.gravity-theme input[type=month], .gform_wrapper.gravity-theme input[type=number], .gform_wrapper.gravity-theme input[type=password], .gform_wrapper.gravity-theme input[type=search], .gform_wrapper.gravity-theme input[type=tel], .gform_wrapper.gravity-theme input[type=text], .gform_wrapper.gravity-theme input[type=time], .gform_wrapper.gravity-theme input[type=url], .gform_wrapper.gravity-theme input[type=week], .gform_wrapper.gravity-theme select, .gform_wrapper.gravity-theme textarea,
+.gform_wrapper.gravity-theme .ginput_complex label, .gform_wrapper.gravity-theme .ginput_complex legend, .gfield_checkbox .gchoice {
+    font-family: "Gotham SSm A","Gotham SSm B" !important;
+    font-size: 15px;
+    line-height: 18px;
+        margin-bottom: 15px
+}
+
+#greenwich-forms p.gform_required_legend {
+    margin-bottom: 30px !important;
+}
+
+#greenwich-forms .gform_fields input, #greenwich-forms .gform_fields select {
+    height: 49px;
+    border: 1px solid #d1d1d1;
+    background: #f9f9f9;
+}
+
+#greenwich-forms .ginput_container.ginput_container_textarea textarea {
+    border: 1px solid #d1d1d1;
+    background: #f9f9f9;
+}
+
+#greenwich-forms legend.gfield_label.gfield_label_before_complex {
+    border-bottom: 0;
+}
+
+#greenwich-forms .gform_wrapper.gravity-theme .ginput_complex label {
+    margin-top: -15px !important;
+    color: #8e8e8e;
+    font-size: 13px;
+}
+
+#greenwich-forms p.gform_required_legend span.gfield_required.gfield_required_asterisk {
+    margin-top: 30px !important;
+}
+
+
+@media only screen and (max-width: 400px) {
+    #greenwich-forms .display-form h2.gform_title {
+        font-size: 41px;
+    }
+    
+    #greenwich-forms .display-form span.gform_description {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    #greenwich-forms .field_description_below {
+        border-bottom: 1px solid #e0e0e0 !important;
+        padding-bottom: 25px;
+        margin-bottom: 15px;
+    }
+	
+}
+
+
+#greenwich-forms .gform_wrapper.gravity-theme .gform_footer {
+    padding: 0 !important;
+	margin-top: 31px;
+	z-index: 2;
+}
+
+input.gform_button.button.form-submit:hover {
+    background: linear-gradient(to left, #1db9ff 50%, #79d5ff 50%) right;
+    background-size: 200%;
+    transition: all .5s;
+}
+
+
+input.gform_button.button.form-submit {
+    background: #79d5ff;
+    background-size: 200%;
+    transition: all .5s;
+}
+
+#greenwich-forms .gfield_description.gfield_consent_description {
+    display: none !important;
+}		</style>
+		<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>  <!-- Gotham Font -->
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7464294/6737152/css/fonts.css" />
+  <!-- Garamond Font -->
+  <script src="https://use.typekit.net/chw2qir.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.5/jquery.bxslider.min.js"></script>
+</head>
+    <body class="home page-template page-template-templates page-template-landing page-template-templateslanding-php page page-id-10 wpb-js-composer js-comp-ver-7.8 vc_responsive" id="home-main">
+    <!--[if I E]>
+      <div class="alert alert-warning">
+        You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.      </div>
+    <![endif]-->
+    
+    <div class="loader-wrapper">
+  <div class="loader">
+    <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/loader.svg">
+  </div>
+</div>
+    
+<div class="landing-hero-image" style="background-image: url(https://www.greenwichlibrary.org/wp-content/uploads/2024/06/GRT-Web-Banner-James.png); display: block; background-position: center top"></div>
+
+<header class="header-landing">
+<!-- LANDING IMAGE -->
+<div class="landing-hero" style="display: block; position: relative; z-index: 0;">
+      <div class="message-block">
+      <h1><span data-color="learn">Greenwich Reads Together</span></h1>
+      <p>Our 2024 book is "James" by Percival Everett, a brilliant, action-packed reimagining of "Adventures of Huckleberry Finn", both harrowing and darkly humorous, told from the enslaved Jim’s point of view.</p>
+                        <a href="https://www.greenwichlibrary.org/greenwich-reads-together/2024-2/" class="button learn secondary">Learn More</a>
+                  </div>
+  </div>
+<div class="search-box home-main">
+  <div class="col-xs-12 search-header">
+    <div class="col-xs-6 search-logo">
+      <a class="navbar-brand" href="https://www.greenwichlibrary.org/">
+        <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/main-logo.svg" class="main-logo hidden-xs" alt="Greenwich Library Logo">
+        <p class="search-logo-text">Greenwich Library</p>
+      </a>
+    </div>
+    <div class="close-search-wrapper col-xs-6">
+      <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/navigation/close-icon.svg" class="close-search" alt="Close Menu Icon">
+    </div>
+  </div>
+  <form action="https://greenwichlibrary.bibliocommons.com/search" class="searchForm not-full-bleed search-form" role="search" method="get">
+
+  
+  <div class="text-submit">
+    <input type="hidden" name="t" value="smart"/>
+	  <label style="display: none" for="search-input">Enter Search Term</label>
+    <input type="text" name="q" id="search-input" class="query" title="What are you looking for?" placeholder="What are you looking for?" autofocus/><button type="submit" class="home-main search-button"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/bigarrow.svg" alt="Big Arrow"></button>
+  </div>
+  <div class="radio-buttons">
+    <input type="radio" id="c1" name="search" value="catalog" checked="checked" class="catalog"><label for="c1">Catalog</label>
+    <input type="radio" id="c2" name="search" value="site" class="site"><label for="c2">Website</label>
+    <input type="radio" id="c3" name="search" value="libcal" class="libcal"><label for="c3">Events</label>
+  </div>
+</form>
+</div>
+<!-- HEADER AND SECONDARY NAV -->
+  <div class="gradient-box"></div>
+  <div class="container-fluid nav-secondary" role="navigation">
+        <a class="navbar-brand" href="https://www.greenwichlibrary.org/">
+      <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/main-logo.svg" class="main-logo hidden-xs" alt="Greenwich Library Logo"><!-- 
+       --><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/main-logo-green.svg" class="main-logo-green hidden-xs" alt="Greenwich Library Logo Green">
+      <p class="main-logo-text">Greenwich Library</p>
+    </a>
+    <nav class="secondary-nav-items">
+      <ul>
+        <li class="secondary-nav-icons hidden-sm hidden-xs">
+          <a href="https://www.greenwichlibrary.org/donate/" class="nav-links" target="_blank">
+            <svg version="1.1" id="Layer_1" 
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px"
+   viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve" class="heart">
+<switch>
+  <g>
+    <path d="M87.598,14.463c-9.373-9.373-24.568-9.373-33.939,0L48,20.12l-5.658-5.655c-9.373-9.373-24.568-9.373-33.939,0
+      c-9.373,9.372-9.373,24.567,0,33.94l5.656,5.654L48,88l33.941-33.941l5.656-5.654C96.971,39.032,96.971,23.836,87.598,14.463z
+       M70.627,54.061L48,76.688L25.373,54.061L14.061,42.749c-6.248-6.248-6.248-16.379,0-22.629c6.25-6.248,16.379-6.248,22.627,0
+      L48,31.434L59.314,20.12c6.248-6.248,16.379-6.248,22.627,0c6.248,6.25,6.248,16.379,0,22.629L70.627,54.061z"/>
+  </g>
+</switch>
+</svg>            <p class="sans-serif-medium">Donate</p>
+          </a>
+        </li>
+        
+        <li class="secondary-nav-icons hidden-sm hidden-xs">
+          <a href="/borrowing" class="nav-links">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="-351 353 96 96" style="enable-background:new -351 353 96 96;" xml:space="preserve" class="card">
+<path d="M-268,367h-72c-6.6,0-12,5.1-12,11.5v46c0,6.4,5.4,11.5,12,11.5h72c6.6,0,12-5.1,12-11.5v-46C-256,372.1-261.4,367-268,367z
+   M-264,401.5v21.7c0,2.8-2.3,5.1-5.1,5.1h-69.8c-2.8,0-5.1-2.3-5.1-5.1v-21.7H-264z M-264,380.6v12.9h-80v-12.9
+  c0-3.3,2.6-5.9,5.9-5.9h68.2C-266.6,374.7-264,377.3-264,380.6z"/>
+</svg>
+            <p class="sans-serif-medium">Library Card</p>
+          </a>
+        </li>
+        
+        <li class="secondary-nav-icons">
+          <a href="https://greenwichlibrary.bibliocommons.com/user/login?destination=%2Fuser_dashboard" class="nav-links">
+            <svg version="1.1" id="Layer_1" 
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px"
+   viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve" class="profile">
+<switch>
+  <g>
+    <path d="M64.671,53.256C69.188,48.893,72,42.775,72,36V24C72,10.745,61.255,0,48,0S24,10.745,24,24v12
+      c0,6.773,2.812,12.889,7.326,17.253C13.037,56.102,0,63.488,0,72.094V80c0,6.63,5.37,12,12,12h72c6.63,0,12-5.37,12-12v-7.875
+      C96,63.52,82.962,56.111,64.671,53.256z M32,36V24c0-8.836,7.164-16,16-16c8.837,0,16,7.164,16,16v12c0,8.836-7.163,16-16,16
+      C39.164,52,32,44.836,32,36z M88,80c0,2.206-1.794,4-4,4H12c-2.206,0-4-1.794-4-4v-7.906c0-0.932,2.305-3.941,9.152-6.812
+      C25.156,61.925,36.4,60,48,60c11.594,0,22.835,1.93,30.842,5.294C85.693,68.174,88,71.189,88,72.125V80z"/>
+  </g>
+</switch>
+</svg>            <p class="sans-serif-medium hidden-sm hidden-xs">Account</p>
+          </a>
+        </li>
+        
+        <li class="secondary-nav-icons">
+          <a href="#" class="nav-links search-toggle">
+            <svg version="1.1" id="Layer_1"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px"
+   viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve" class="search">
+<switch>
+  <g>
+    <path d="M90.829,85.172L68.128,62.471C73.055,56.312,76,48.5,76,40C76,20.118,59.883,4,40,4C20.118,4,4,20.118,4,40
+      s16.118,36,36,36c8.5,0,16.312-2.946,22.471-7.873l22.701,22.701C85.953,91.609,86.977,92,88,92c1.024,0,2.048-0.391,2.829-1.172
+      C92.391,89.267,92.391,86.733,90.829,85.172z M40,68c-15.464,0-28-12.536-28-28s12.536-28,28-28c15.465,0,28,12.536,28,28
+      S55.465,68,40,68z"/>
+  </g>
+</switch>
+</svg>
+            <p class="sans-serif-medium hidden-sm hidden-xs">Search</p>
+          </a>
+        </li>
+        
+        <li class="secondary-nav-icons hidden-md hidden-lg hidden-xl">
+          <a href="#" class="nav-links">
+            <svg version="1.1" id="Layer_1" 
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px"
+   viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve" class="menu">
+<switch>
+  
+  <g>
+    <path d="M12,28h72c2.209,0,4-1.791,4-4s-1.791-4-4-4H12c-2.209,0-4,1.791-4,4S9.791,28,12,28z M84,36H12c-2.209,0-4,1.791-4,4
+      s1.791,4,4,4h72c2.209,0,4-1.791,4-4S86.209,36,84,36z M84,52H12c-2.209,0-4,1.791-4,4s1.791,4,4,4h72c2.209,0,4-1.791,4-4
+      S86.209,52,84,52z M84,68H12c-2.209,0-4,1.791-4,4s1.791,4,4,4h72c2.209,0,4-1.791,4-4S86.209,68,84,68z"/>
+  </g>
+</switch>
+
+</svg>
+          </a>
+        </li>
+      </ul>
+    </nav>    
+  </div>
+
+<!-- PRIMARY NAV DESKTOP -->
+  <div class="container-fluid nav-primary hidden-xs hidden-sm" role="navigation">
+    <nav class="primary-nav-items">
+      <ul>
+        <li data-menu="visit"><a class="submenu-toggle"><h5>Visit</h5></a></li>
+        <li data-menu="explore"><a class="submenu-toggle"><h5>Explore</h5></a></li>
+        <li data-menu="learn"><a class="submenu-toggle"><h5>Learn</h5></a></li>
+        <li data-menu="donate-page"><a class="submenu-toggle"><h5>Support</h5></a></li>
+        <li data-menu="about"><a class="submenu-toggle"><h5>About</h5></a></li>
+        <li data-menu="help"><a class="submenu-toggle"><h5>Help</h5></a></li>
+      </ul>
+
+      <div class="submenu-wrapper row">
+
+        <div class="visit menu-feature-wrapper">
+          <div class="col-md-4 visit secondary">
+            <div class="menu-visit-container"><ul id="menu-visit" class="submenu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://www.greenwichlibrary.org/hours-locations/">Hours &#038; Locations</a></li>
+<li id="menu-item-3168" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3168"><a target="_blank" rel="noopener" href="https://greenwichlibrary.libcal.com/calendar/events?cid=-1&#038;t=m&#038;d=0000-00-00&#038;cal=-1&#038;inc=0">Calendar</a></li>
+<li id="menu-item-43" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="https://www.greenwichlibrary.org/byram-shubert/">Byram Shubert</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="https://www.greenwichlibrary.org/cos-cob/">Cos Cob</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://www.greenwichlibrary.org/perrot-memorial-library/">Perrot Memorial Library</a></li>
+<li id="menu-item-15235" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15235"><a href="https://www.greenwichlibrary.org/print/">Wireless Printing</a></li>
+<li id="menu-item-45377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45377"><a href="https://www.greenwichlibrary.org/room-rentals/">Room Rentals</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="https://www.greenwichlibrary.org/accessibility/">Accessibility</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://www.greenwichlibrary.org/flinn-gallery/">Flinn Gallery</a></li>
+<li id="menu-item-40115" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40115"><a target="_blank" rel="noopener" href="https://greenwichlibrarycafe.org/">The Café at Greenwich Library</a></li>
+</ul></div>          </div>
+          <div class="col-md-8 menu-feature">
+            <div class="col-md-6">
+              <a href="https://www.google.com/maps/place/Greenwich+Library/@41.02944,-73.6316177,17z/data=!3m1!4b1!4m2!3m1!1s0x89c29848118b6613:0xaff03168a7de3b62" target="_blank"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/map.jpg" class="menu-image" alt="Map"></a>
+              <h5>MAIN LIBRARY SUMMER HOURS</h5>
+              <p>Mon - Thurs | 9 am - 9 pm</p>
+              <p>Fri - Sat | 9 am - 5 pm</p>
+              <p>Sun | 1 pm - 5 pm</p>
+              <br />
+              <h5>LOCATION</h5>
+              <p>101 West Putnam Avenue</p>
+              <p>Greenwich, CT 06830-5387</p>
             </div>
+            <div class="col-md-6">
+              <a href="/flinn-gallery"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/flinngallery.jpg" class="menu-image" alt="Flinn Gallery"></a>
+              <h5>FLINN GALLERY SUMMER HOURS</h5>
+              <p>Mon - Wed and Fri | 12 pm - 4 pm</p>
+              <p>Thurs | 12 pm - 8 pm</p>
+              <p>Sat | 12 pm - 4 pm</p>
+              <p>Sun | 1 pm - 5 pm</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
         </div>
-    </body>
+        
+        <div class="explore menu-feature-wrapper">
+          <div class="col-md-4 explore secondary">
+            <div class="menu-explore-container"><ul id="menu-explore" class="submenu"><li id="menu-item-40767" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40767"><a href="https://www.greenwichlibrary.org/forms/sign-up-for-a-library-card/">Library Cards</a></li>
+<li id="menu-item-3026" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3026"><a target="_blank" rel="noopener" href="https://greenwichlibrary.bibliocommons.com/">Catalog</a></li>
+<li id="menu-item-46719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46719"><a href="https://www.greenwichlibrary.org/staff-picks/">Staff Picks</a></li>
+<li id="menu-item-54422" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54422"><a href="https://www.greenwichlibrary.org/forms/personalized-reading-recommendations/">Personalized Recommendations</a></li>
+<li id="menu-item-51158" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51158"><a href="https://www.greenwichlibrary.org/digital-library/">Digital Library</a></li>
+<li id="menu-item-3029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3029"><a href="https://www.greenwichlibrary.org/research-resources/">Research &#038; Resources</a></li>
+<li id="menu-item-3030" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3030"><a href="https://www.greenwichlibrary.org/children/">Children</a></li>
+<li id="menu-item-56488" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56488"><a href="https://www.greenwichlibrary.org/children/summer-reading/">Children’s Summer Reading</a></li>
+<li id="menu-item-3031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3031"><a href="https://www.greenwichlibrary.org/teens/">Teens</a></li>
+<li id="menu-item-56489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56489"><a href="https://www.greenwichlibrary.org/adult-summer-reading/">Adult Summer Reading</a></li>
+<li id="menu-item-3981" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3981"><a target="_blank" rel="noopener" href="http://www.glohistory.org/">Oral History Project</a></li>
+</ul></div>          </div>
+          <div class="col-md-8 menu-feature">
+            <div class="col-md-6">
+              <a href="/digital-library"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/Digital.jpg" class="menu-image" alt="Digital Library apps on an iPad"></a>
+              <h5>DIGITAL LIBRARY</h5>
+              <p>Download eBooks and audiobooks and stream music, video, and magazines from anywhere.</p>
+            </div>
+            <div class="col-md-6">
+              <a href="/children"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/childrenslibrary.jpg" class="menu-image" alt="Children's Library"></a>
+              <h5>CHILDREN'S ROOM</h5>
+              <p>Curl up with a good book, get help with homework or find a story time or special event.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="learn menu-feature-wrapper">
+          <div class="col-md-4 learn secondary">
+            <div class="menu-learn-container"><ul id="menu-learn" class="submenu"><li id="menu-item-3313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3313"><a target="_blank" rel="noopener" href="https://greenwichlibrary.libcal.com/calendar/events?cid=-1&#038;t=m&#038;d=0000-00-00&#038;cal=-1&#038;inc=0">Calendar</a></li>
+<li id="menu-item-44797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44797"><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCXZNfQBttPvWPUBXs8L5dvw/videos">Recorded Events</a></li>
+<li id="menu-item-3033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3033"><a href="https://www.greenwichlibrary.org/authors-live/">AuthorsLive</a></li>
+<li id="menu-item-54581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54581"><a href="https://www.greenwichlibrary.org/innovation-lab/">Innovation Lab</a></li>
+<li id="menu-item-3037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3037"><a href="https://www.greenwichlibrary.org/learning-lab/">Learning Lab</a></li>
+<li id="menu-item-3646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3646"><a href="https://www.greenwichlibrary.org/book-groups/">Book Groups</a></li>
+<li id="menu-item-15680" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15680"><a href="https://www.greenwichlibrary.org/research-resources/music/">Concerts</a></li>
+<li id="menu-item-3900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3900"><a href="https://www.greenwichlibrary.org/friends-friday-films/">Friends Friday Films</a></li>
+<li id="menu-item-56507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56507"><a href="https://www.greenwichlibrary.org/greenwich-reads-together/2024-2/">Greenwich Reads Together: 2024</a></li>
+</ul></div>          </div>
+          <div class="col-md-8 menu-feature">
+            <div class="col-md-6">
+              <a href="/authors-live"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/Authors.jpg" class="menu-image" alt="Authors Live Event"></a>
+              <h5>AUTHORSLIVE</h5>
+              <p>Discover new books, hear from authors about their work, and meet other book lovers in the community.</p>
+            </div>
+            <div class="col-md-6">
+              <a href="/learninglab"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/TechTraining.jpg" class="menu-image" alt="Tech Training Staff"></a>
+              <h5>TECHNOLOGY TRAINING</h5>
+              <p>Empower yourself with a practical understanding of current technology.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="donate-page menu-feature-wrapper">
+          <div class="col-md-4 donate-page secondary">
+            <div class="menu-donate-container"><ul id="menu-donate" class="submenu"><li id="menu-item-3041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3041"><a href="https://www.greenwichlibrary.org/support/">Support</a></li>
+<li id="menu-item-3042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3042"><a href="https://www.greenwichlibrary.org/greenwich-library/volunteer/">Volunteer</a></li>
+<li id="menu-item-52522" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52522"><a href="https://www.greenwichlibrary.org/greenwich-library/friends-of-greenwich-library/">Friends of Greenwich Library</a></li>
+</ul></div>          </div>
+          <div class="col-md-8 menu-feature">
+            <div class="col-md-6">
+              <a href="/support"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/Support.jpg" class="menu-image" alt="Donate Image"></a>
+              <h5>DONATE</h5>
+              <p>Support Greenwich Library and help make our community a better place to live.</p>
+            </div>
+            <div class="col-md-6">
+              <a href="/volunteer"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/volunteer.jpg" class="menu-image" alt="Flinn Gallery"></a>
+              <h5>VOLUNTEER</h5>
+              <p>Give back to your community - volunteer!</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="about menu-feature-wrapper">
+          <div class="col-md-4 about secondary">
+            <div class="menu-about-container"><ul id="menu-about" class="submenu"><li id="menu-item-3043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3043"><a href="https://www.greenwichlibrary.org/greenwich-library/">Greenwich Library</a></li>
+<li id="menu-item-3044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3044"><a href="https://www.greenwichlibrary.org/byram-shubert/">Byram Shubert</a></li>
+<li id="menu-item-3716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3716"><a href="https://www.greenwichlibrary.org/cos-cob/">Cos Cob</a></li>
+<li id="menu-item-3472" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3472"><a href="https://www.greenwichlibrary.org/borrowing/">Borrowing</a></li>
+<li id="menu-item-44921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44921"><a href="https://www.greenwichlibrary.org/reimagine-renovation/">ReImagine Renovation</a></li>
+<li id="menu-item-55915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55915"><a href="https://www.greenwichlibrary.org/greenwich-library-blog/">Press Room &#038; Blog</a></li>
+</ul></div>          </div>
+          <div class="col-md-8 menu-feature">
+            <div class="col-md-6">
+           <a href="/borrowing"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/Borrowing.jpg" class="menu-image" alt="Greenwich Library Card"></a>
+              <h5>BORROWING</h5>
+              <p>Sign up for your very own Greenwich Library card to access thousands of books, movies, resources, and more.</p>
+            </div>
+            <div class="col-md-6">
+              <a href="research-resources/local-history-collection/" target="_blank"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/historicphotos.png" class="menu-image" alt="Historic Photo"></a>
+              <h5>LOCAL HISTORY</h5>
+              <p>See the past come alive! Explore the history of Greenwich with  maps, photos, books, and databases.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="help menu-feature-wrapper">
+          <div class="col-md-4 help secondary">
+            <div class="menu-help-container"><ul id="menu-help" class="submenu"><li id="menu-item-34576" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34576"><a href="https://www.greenwichlibrary.org/faq/">Frequently Asked Questions</a></li>
+<li id="menu-item-3508" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3508"><a href="https://www.greenwichlibrary.org/forms/ask-librarian/">Ask A Librarian</a></li>
+<li id="menu-item-55623" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55623"><a target="_blank" rel="noopener" href="https://greenwichlibrary.libcal.com/appointments">Librarian by Appointment</a></li>
+</ul></div>          </div>
+          <div class="col-md-8 menu-feature">
+            <div class="col-md-6">
+              <a href="/faq"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/faq.jpg" class="menu-image" alt=""></a>
+              <h5>FAQS</h5>
+              <p>Find answers to our most frequently asked questions.</p>
+            </div>
+            <div class="col-md-6">
+              <a href="/forms/ask-librarian"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/ask-a-librarian.jpg" class="menu-image" alt="Flinn Gallery"></a>
+              <h5>ASK A LIBRARIAN</h5>
+              <p>We're here to help - ask us anything.</p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+
+
+      </div>
+    </nav>
+  </div>
+
+<!-- PRIMARY NAV TABLET/MOBILE -->
+  <div class="container-fluid hidden-md hidden-lg hidden-lg mobile-menu" role="navigation">
+    <div class="row">
+      <div class="col-xs-12 mobile-menu-header">
+        <div class="brand-wrapper col-sm-6 col-xs-4">
+          <a class="mobile-brand" href="https://www.greenwichlibrary.org/">
+            <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/main-logo-green.svg" class="main-logo-green hidden-xs" alt="Greenwich Library Logo Green"><!--
+            --><p class="mobile-brand-text">Greenwich Library</p>
+          </a>
+        </div>
+        <!-- HIDDEN WHEN MENU OPEN -->
+        <div class="options">
+          <ul>
+            
+            <li class="secondary-nav-icons">
+              <a href="https://greenwichlibrary.bibliocommons.com/user/login">
+                <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/navigation/profile-icon-grey.svg" class="profile" alt="Profile Icon Grey">
+              </a>
+            </li>
+            
+            <li>
+              <a id="menu-search-toggle">
+                <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/navigation/search-icon-grey.svg" class="search-from-menu" alt="Search Icon Grey">
+              </a>
+            </li>
+
+            <li>
+              <a id="menu-close-toggle">
+                <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/navigation/close-icon-grey.svg" class="close-menu" alt="Close Menu Icon Grey">
+              </a>
+            </li>
+            
+          </ul>
+        </div>
+        <!-- HIDDEN WHEN MENU CLOSED -->
+        <div class="close-submenu-wrapper">
+          <img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/navigation/close-icon.svg" class="close-submenu" alt="Close Submenu Icon">
+        </div>
+      </div>
+      <div class="col-xs-12 mobile-menu-container" >
+        <ul class="main-mobile-menu">
+          <li data-mobile-menu="visit"><h3 class="sans-serif-book">Visit</h3></li>
+          <li data-mobile-menu="explore"><h3 class="sans-serif-book">Explore</h3></li>
+          <li data-mobile-menu="learn"><h3 class="sans-serif-book">Learn</h3></li>
+          <li data-mobile-menu="donate-page"><h3 class="sans-serif-book">Support</h3></li>
+          <li data-mobile-menu="about"><h3 class="sans-serif-book">About</h3></li>
+          <li data-mobile-menu="help"><h3 class="sans-serif-book">Help</h3></li>
+        </ul>
+
+        <div id="mobile-submenu-container" class="mobile-submenu-container" >
+          <div class="submenu-list-holder" data-toggle-menu="visit">
+            <div class="menu-visit-container"><ul id="menu-visit-1" class="mobile-submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="https://www.greenwichlibrary.org/hours-locations/">Hours &#038; Locations</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3168"><a target="_blank" rel="noopener" href="https://greenwichlibrary.libcal.com/calendar/events?cid=-1&#038;t=m&#038;d=0000-00-00&#038;cal=-1&#038;inc=0">Calendar</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-43"><a href="https://www.greenwichlibrary.org/byram-shubert/">Byram Shubert</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="https://www.greenwichlibrary.org/cos-cob/">Cos Cob</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://www.greenwichlibrary.org/perrot-memorial-library/">Perrot Memorial Library</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15235"><a href="https://www.greenwichlibrary.org/print/">Wireless Printing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45377"><a href="https://www.greenwichlibrary.org/room-rentals/">Room Rentals</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44"><a href="https://www.greenwichlibrary.org/accessibility/">Accessibility</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-45"><a href="https://www.greenwichlibrary.org/flinn-gallery/">Flinn Gallery</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40115"><a target="_blank" rel="noopener" href="https://greenwichlibrarycafe.org/">The Café at Greenwich Library</a></li>
+</ul></div>          </div>
+          <div class="submenu-list-holder" data-toggle-menu="explore">
+            <div class="menu-explore-container"><ul id="menu-explore-1" class="mobile-submenu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40767"><a href="https://www.greenwichlibrary.org/forms/sign-up-for-a-library-card/">Library Cards</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3026"><a target="_blank" rel="noopener" href="https://greenwichlibrary.bibliocommons.com/">Catalog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-46719"><a href="https://www.greenwichlibrary.org/staff-picks/">Staff Picks</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54422"><a href="https://www.greenwichlibrary.org/forms/personalized-reading-recommendations/">Personalized Recommendations</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-51158"><a href="https://www.greenwichlibrary.org/digital-library/">Digital Library</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3029"><a href="https://www.greenwichlibrary.org/research-resources/">Research &#038; Resources</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3030"><a href="https://www.greenwichlibrary.org/children/">Children</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56488"><a href="https://www.greenwichlibrary.org/children/summer-reading/">Children’s Summer Reading</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3031"><a href="https://www.greenwichlibrary.org/teens/">Teens</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56489"><a href="https://www.greenwichlibrary.org/adult-summer-reading/">Adult Summer Reading</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3981"><a target="_blank" rel="noopener" href="http://www.glohistory.org/">Oral History Project</a></li>
+</ul></div>          </div>
+          <div class="submenu-list-holder" data-toggle-menu="learn">
+            <div class="menu-learn-container"><ul id="menu-learn-1" class="mobile-submenu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3313"><a target="_blank" rel="noopener" href="https://greenwichlibrary.libcal.com/calendar/events?cid=-1&#038;t=m&#038;d=0000-00-00&#038;cal=-1&#038;inc=0">Calendar</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44797"><a target="_blank" rel="noopener" href="https://www.youtube.com/channel/UCXZNfQBttPvWPUBXs8L5dvw/videos">Recorded Events</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3033"><a href="https://www.greenwichlibrary.org/authors-live/">AuthorsLive</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-54581"><a href="https://www.greenwichlibrary.org/innovation-lab/">Innovation Lab</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3037"><a href="https://www.greenwichlibrary.org/learning-lab/">Learning Lab</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3646"><a href="https://www.greenwichlibrary.org/book-groups/">Book Groups</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15680"><a href="https://www.greenwichlibrary.org/research-resources/music/">Concerts</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3900"><a href="https://www.greenwichlibrary.org/friends-friday-films/">Friends Friday Films</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56507"><a href="https://www.greenwichlibrary.org/greenwich-reads-together/2024-2/">Greenwich Reads Together: 2024</a></li>
+</ul></div>          </div>
+          <div class="submenu-list-holder" data-toggle-menu="donate-page">
+            <div class="menu-donate-container"><ul id="menu-donate-1" class="mobile-submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3041"><a href="https://www.greenwichlibrary.org/support/">Support</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3042"><a href="https://www.greenwichlibrary.org/greenwich-library/volunteer/">Volunteer</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52522"><a href="https://www.greenwichlibrary.org/greenwich-library/friends-of-greenwich-library/">Friends of Greenwich Library</a></li>
+</ul></div>          </div>
+          <div class="submenu-list-holder" data-toggle-menu="about">
+            <div class="menu-about-container"><ul id="menu-about-1" class="mobile-submenu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3043"><a href="https://www.greenwichlibrary.org/greenwich-library/">Greenwich Library</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3044"><a href="https://www.greenwichlibrary.org/byram-shubert/">Byram Shubert</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3716"><a href="https://www.greenwichlibrary.org/cos-cob/">Cos Cob</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3472"><a href="https://www.greenwichlibrary.org/borrowing/">Borrowing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-44921"><a href="https://www.greenwichlibrary.org/reimagine-renovation/">ReImagine Renovation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55915"><a href="https://www.greenwichlibrary.org/greenwich-library-blog/">Press Room &#038; Blog</a></li>
+</ul></div>          </div>
+          <div class="submenu-list-holder" data-toggle-menu="help">
+            <div class="menu-help-container"><ul id="menu-help-1" class="mobile-submenu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-34576"><a href="https://www.greenwichlibrary.org/faq/">Frequently Asked Questions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3508"><a href="https://www.greenwichlibrary.org/forms/ask-librarian/">Ask A Librarian</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-55623"><a target="_blank" rel="noopener" href="https://greenwichlibrary.libcal.com/appointments">Librarian by Appointment</a></li>
+</ul></div>          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</header>    
+    <div class="wrap container" role="document">
+      <div class="content row">
+        <main class="main">
+          
+<div class="container-fluid landing-wrapper">
+  <div class="row">
+    <!-- GET VISUAL COMPOSER CONTENT, IF ANY -->
+    <div class="landing-content col-xs-12">
+                 <div class="wpb-content-wrapper"><div class="vc_row wpb_row vc_row-fluid not-full-bleed"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='datepicker-wrapper clearfix'>
+            <div id='datepicker' class='col-xs-12 col-sm-6 col-md-4'></div>
+
+            <div id='events-container' class='col-xs-12 col-sm-6 col-md-8'>
+                <div id='events-loading-icon' style='display:none;'><img src='https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/loader.svg' alt='Loading...'></div>
+              <div id='event-container-repeat' class='event-one event-container col-xs-12 col-sm-12 col-md-12'>
+                <div class='event-content'>
+                  <!--div class='event-one-image'></div-->
+                  <div class='event-text'>
+					<div class='event-details'>
+						<span class='event-time utility'></span>
+						<span class='event-splitter utility'>|</span>
+						<span class='event-date utility'></span>
+						<span class='event-splitter utility'>|</span>
+						<span class='event-location utility'></span>
+					</div>
+                    <h4 class='event-title'>test</h4>
+                    <a href='' class='button eventOne home-main' alt='View Event' target='_blank'>&nbsp;</a>
+                  </div>
+                </div>
+              </div>
+
+              <!--div class='event-one col-xs-12 col-sm-12 col-md-12'>
+                <div class='event-content'>
+                  <div class='event-one-image'></div>
+                  <div class='event-text'>
+					<div class='event-details'>
+						<span class='event-time utility'></span>
+						<span class='event-splitter utility'>|</span>
+						<span class='event-date utility'></span>
+						<span class='event-splitter utility'>|</span>
+						<span class='event-location utility'></span>
+					</div>
+                    <h4 class='event-one-title'></h4>
+                    <p class='event-one-description hidden-sm hidden-xs'></p>
+                    <a href='' class='button eventOne home-main' target='_blank'></a>
+                  </div>
+                </div>
+              </div-->
+            <div class='see-all-link'>
+              <a alt='View All Todays Events' href='https://greenwichlibrary.libcal.com/calendar/events?cid=-1&t=m&d=0000-00-00&cal=-1&inc=0' target='_blank' class='button secondary home-main'>View All Today's Events<span class='button-arrow'><img src='https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/button-arrow.svg' alt='Button Arrow'></span></a>
+            </div>
+
+            </div>
+          </div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid not-full-bleed"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='feature-wrapper'>
+              <div class='feature-img-wrapper' style='background-image: url(https://www.greenwichlibrary.org/wp-content/uploads/2024/05/Choose-Your-Adventure-Summer-Reading-24-Banner-v2.png);'></div>
+              <div class='feature-card' data-color='explore'>
+                <div class='category-date'>
+                        <p class='utility'>EXPLORE</p>
+                        <p class='utility date'></p>
+                      </div>
+                <div class='feature-text'><h3>Summer Reading</h3>
+<p style="text-align: left;">Join us for our 2024 Summer Reading program, <em>Choose Your Adventure</em>, from June 10 through August 2. No matter your age, there is a program for you to join!</p>
+<p style="text-align: left;"><a href="https://www.greenwichlibrary.org/children/summer-reading">Pre-Readers-Grade 6</a>   |   <a href="https://www.greenwichlibrary.org/teens/">Teens Entering Grades 7-12</a>   |   <a href="https://www.greenwichlibrary.org/adult-summer-reading/">Adults Ages 18+</a></p>
+</div>
+                <a alt='Sign Up' href='https://greenwichlibrary.beanstack.org/summer_reading' class='button secondary explore' >Sign Up <span class='button-arrow'><img src='https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/button-arrow.svg' alt='Button Arrow'></span></a>
+              </div>
+            </div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" data-vc-parallax="1.5" data-vc-parallax-image="https://www.greenwichlibrary.org/wp-content/uploads/2016/04/Pattern-BG-Main.svg" class="vc_row wpb_row vc_row-fluid not-full-bleed vc_row-has-fill vc_row-o-content-middle vc_row-flex vc_general vc_parallax vc_parallax-content-moving"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='home-main cta-block'><h2 style="text-align: center;">August Events</h2>
+<p style="text-align: center;">These printable one-page calendars for each Greenwich Library branch are fridge-ready.</p>
+<div class='cta-button'><a href='https://www.greenwichlibrary.org/wp-content/uploads/2024/07/AUG-2024-Calendars-for-Web_v2.pdf' class='button neutral' target='_blank'>Get Printable Calendars</a></div>
+         </div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid not-full-bleed"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='feature-wrapper'>
+              <div class='feature-img-wrapper' style='background-image: url(https://www.greenwichlibrary.org/wp-content/uploads/2021/06/DSC_2461-1024x400.jpg);'></div>
+              <div class='feature-card' data-color='explore'>
+                <div class='category-date'>
+                        <p class='utility'>EXPLORE</p>
+                        <p class='utility date'></p>
+                      </div>
+                <div class='feature-text'><h3>Peterson Business Collection</h3>
+<div class="feature-text">
+<p>You are just a click away from some of the most powerful business research tools available today! Review investment analysis from Morningstar’s Investing Center, Standard &amp; Poor’s Capital IQ, Value Line, and our Bloomberg Terminal available at the Main Library. Conduct market research using Plunkett Research Online, Reference Solutions, and Statista. Discover grants available to individuals and nonprofits from foundations nationwide through Candid’s comprehensive databases. Utilize job search resources to craft an impressive resume or prepare for an interview.</p>
+</div>
+</div>
+                <a alt='Get Started' href='https://www.greenwichlibrary.org/research-resources/business-resources/' class='button secondary explore' target='_blank'>Get Started <span class='button-arrow'><img src='https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/button-arrow.svg' alt='Button Arrow'></span></a>
+              </div>
+            </div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid not-full-bleed"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element module" >
+		<div class="wpb_wrapper">
+			<h3 class="media-heading" style="text-align: left;"><a href="https://greenwichlibrary.libcal.com/event/12396557"><img decoding="async" class="aligncenter wp-image-56524" src="https://www.greenwichlibrary.org/wp-content/uploads/2024/07/ClaireHeadshot2.jpg" alt="" width="115" height="150" /></a></h3>
+<h3 class="media-heading" style="text-align: left;">Adult Summer Reading Concert Series: Soprano, Claire Stadtmueller</h3>
+<p>Thursday, August 1 at 7:00pm at Byram Shubert Library</p>
+<p>Join us for an evening of famous arias and songs with Claire Stadtmueller, a soprano vocalist sure to impress. Ms. Stadtmueller is a prolific vocalist that has taken the stage at some of the most renowned performance spaces including Carnegie Hall and Lincoln Center.</p>
+<p><a href="https://greenwichlibrary.libcal.com/event/12396557">More Info</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element module" >
+		<div class="wpb_wrapper">
+			<h3><a href="https://greenwichlibrary.libcal.com/event/12077200"><img decoding="async" class="aligncenter wp-image-56512 size-thumbnail" src="https://www.greenwichlibrary.org/wp-content/uploads/2024/07/Childrens-Summer-Reading-Finale-2024-150x150.png" alt="" width="150" height="150" srcset="https://www.greenwichlibrary.org/wp-content/uploads/2024/07/Childrens-Summer-Reading-Finale-2024-150x150.png 150w, https://www.greenwichlibrary.org/wp-content/uploads/2024/07/Childrens-Summer-Reading-Finale-2024.png 236w" sizes="(max-width: 150px) 100vw, 150px" /></a></h3>
+<h3>Children’s Summer Reading Finale Party</h3>
+<p>Saturday, August 3 from 2:00pm to 3:00pm</p>
+<p>Summer Reading participants are invited to join us for an adventure worthy of the seven seas.  Registration is required and space is limited. For grades K-6.</p>
+<p><a href="https://greenwichlibrary.libcal.com/event/12077200">Register Here</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid not-full-bleed"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element module" >
+		<div class="wpb_wrapper">
+			<h3><a href="https://greenwichlibrary.libcal.com/event/12395273"><img decoding="async" class="aligncenter wp-image-56523" src="https://www.greenwichlibrary.org/wp-content/uploads/2024/07/Its-a-Wonderful-Town-NYC-in-the-Movies.png" alt="" width="228" height="150" /></a></h3>
+<h3>&#8220;It&#8217;s a Wonderful Town&#8221; New York City in the Movies</h3>
+<p>Tuesday, August 6 at 7:00pm Online<br />
+Join us for a summer travel trip to everything NYC! Media Scholar Brian Rose will examine how filmmakers have been drawn to the dynamic vitality of New York City. Brian will include memorable films as King Kong, West Side Story, Breakfast at Tiffany’s, Taxi Driver, Wall Street, and more.</p>
+<p><a href="https://greenwichlibrary.libcal.com/event/12395273">Register Here</a></p>
+
+		</div>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element module" >
+		<div class="wpb_wrapper">
+			<h3 class="media-heading"><a href="https://greenwichlibrary.libcal.com/event/12629428"><img loading="lazy" decoding="async" class="aligncenter wp-image-56519" src="https://www.greenwichlibrary.org/wp-content/uploads/2024/07/Feature-Your-Finest-Travel-Photos.png" alt="" width="212" height="150" /></a></h3>
+<h3>Feature Your Finest Travel Photos: Select and Organize a Memorable Collection Online</h3>
+<p>Wednesday, August 7 at 3:00pm Online<br />
+Learn to curate your travel pictures like a magazine photo editor! Are you overwhelmed by the hundreds of photos you take every time you go on vacation? In this one-hour session, Isabelle Dervaux will show you how to carefully select a small subset of pictures that highlight your most memorable moments.</p>
+<p><a href="https://greenwichlibrary.libcal.com/event/12629428">Register Here</a></p>
+
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid not-full-bleed"><div class="module wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id='bilbiocommons' data-list='2576980339'></div></div></div></div></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='author-quote'>
+            <div class='quote-container row'>
+              <div class='col-sm-3 hidden-xs'>
+                <p class='author'>Gail Carson Levine</p>
+              </div>
+              <div class='col-sm-9 col-xs-12'>
+                <h3>A library is infinity under a roof.</h3>
+              </div>
+              <div class='col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl'>
+                <p class='utility author'>Gail Carson Levine</p>
+              </div>
+            </div>
+          </div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_raw_code wpb_raw_js" >
+		<div class="wpb_wrapper">
+			<style type="text/css">
+ .chat-widget {
+   position: fixed;
+   right: 4.5%;
+   bottom: 0;
+   border: solid 1px white;
+   height: 0;
+   max-height: 400px;
+   width: 90%;
+   transition: all .5s ease;
+   z-index: 10;
+ }
+ .chat-widget.chat-widget-closed,
+ .chat-widget.chat-widget-opened {
+   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 3px 1px;
+ }
+ @media print {
+   .chat-widget {
+     display: none;
+   }
+ }
+ @media (min-width: 31.25em) {
+   .chat-widget {
+     max-width: 300px;
+   }
+ }
+
+ .chat-widget-closed {
+   height: 36px;
+ }
+
+ .chat-widget-opened {
+   height: 100%;
+   max-height: 400px;
+ }
+
+ .chat-widget-button {
+   background: #fff;
+   border: 0;
+   color: #000;
+   font-size: 100%;
+   height: 36px;
+   margin: 0;
+   outline: 0;
+   padding: 0 1em;
+   text-align: left;
+   width: 100%;
+ }
+
+ .chat-widget-button:hover, .chat-widget-button:active {
+   background-color: white;
+   color: #019875;
+   cursor: pointer;
+ }
+
+ .chat-button-label {
+   display: inline-block;
+   padding-top: 2px;
+ }
+
+ .chat-button-label:before {
+   background-color: #019875;
+   border-radius: 50%;
+   color: #000;
+   content: " ";
+   display: inline-block;
+   height: 1em;
+   margin-right: .5em;
+   position: relative;
+   top: 2px;
+   width: 1em;
+ }
+
+ .chat-widget iframe {
+   border: none;
+   height: 100%;
+   max-height: 362px;
+   width: 100%;
+ }
+
+ .chat-button-control {
+   color: #000;
+   float: right;
+   font-style: normal;
+   font-size: 140%;
+   font-weight: 400;
+ }
+
+ .chat-widget-closed .chat-button-control {
+   transform: rotate(45deg);
+ }
+</style>
+
+<!-- Chat widget bottom tab -->
+<div class="chat-widget" id="chat-widget">
+  <button class="chat-widget-button track" id="chat-button">
+    <span class="chat-button-label">Live Chat with a Librarian!</span>
+    <span class="chat-button-control">&times;</span>
+  </button>
+  <iframe src="https://libraryh3lp.com/chat/greenwich-mainref@chat.libraryh3lp.com?skin=33854" id="library-chat-widget"></iframe>
+</div>
+
+<!-- Chat widget script -->
+<script type="application/javascript">
+ var chatButtonClosed = true;
+ function toggleChatButton(event) {
+   event.preventDefault();
+   var chatWidget = document.getElementById('chat-widget');
+   var chatWidgetClass = 'chat-widget ' + (chatButtonClosed ? 'chat-widget-opened' : 'chat-widget-closed');
+   chatWidget.setAttribute('class', chatWidgetClass);
+   chatButtonClosed = !chatButtonClosed;
+ }
+ var chatButton = document.getElementById('chat-button');
+ chatButton.addEventListener('click', toggleChatButton);
+ chatButton.addEventListener('touchend', toggleChatButton);
+
+ var lh3CheckPresence = function() {
+   var url = 'https://libraryh3lp.com/presence/jid/greenwich-mainref/chat.libraryh3lp.com/js',
+     script = document.createElement('script');
+   script.src = url + '?cb=lh3UpdatePresence';
+   document.getElementsByTagName('head')[0].appendChild(script);
+ }
+
+ var lh3UpdatePresence = function () {
+   for (var i = 0; i < jabber_resources.length; ++i) {
+     var resource = jabber_resources[i];
+     if (resource.show === 'available' || resource.show === 'chat') {
+       document.getElementById('chat-widget').setAttribute('class', 'chat-widget chat-widget-closed');
+     }
+   }
+ }
+ lh3CheckPresence();
+</script>
+		</div>
+	</div>
+</div></div></div></div>
+</div>                  </div>
+
+  </div>
+</div>        </main>
+      </div>
+    </div>
+
+    <footer>
+  <div class="container-fluid">
+    
+    <div class="row hidden-xs newsletter-row" >
+      <div class="col-sm-6 col-md-6 newsletter home-main secondary">
+        <h4>Sign Up for Our Newsletter</h4>
+        <p>Stay up to date with library events, new books, and what's going on in our community.</p>
+        <a href="http://visitor.r20.constantcontact.com/manage/optin?v=001g9Qimy9ZAK1bgu4jvkt84u4S2NqhPwA9DgUUN2UHBTTOgHdK6HsuWT30RYvAoWwnJSaYpO6Jj3Tz7aYINsenmHuu-c0FLTe5o3YtI3G7mg2S7ZFHHqvcfdMnM3Z5QAqBDWGFXRwXKdT91dNYxTUBfFASL4tIjN-7sGL1YDA_M0KhDVhHoZ_p8c_U9Obv2SXg3_2a1dfqqsI%3D" class="button neutral newsletter-button" target="_blank">Sign Up</a>
+        <!-- <div class="ctct-embed-signup">
+           <div>
+               <span id="success_message" style="display:none;">
+                   <p style="text-align:center;">Success!</p>
+               </span>
+               <span id="error_message" style="display:none;">
+                   <p style="text-align:center;" class="error-text"></p>
+               </span>
+               <form data-id="embedded_signup:form" class="ctct-custom-form Form" name="embedded_signup" method="POST" action="https://visitor2.constantcontact.com/api/signup">
+                   <input data-id="ca:input" type="hidden" name="ca" value="521eabaa-4323-406b-9c2c-24fdf2315cc9">
+                   <input data-id="list:input" type="hidden" name="list" value="1">
+                   <input data-id="source:input" type="hidden" name="source" value="EFD">
+                   <input data-id="required:input" type="hidden" name="required" value="list,email">
+                   <input data-id="url:input" type="hidden" name="url" value="">
+                   <p data-id="Email Address:p" ><input data-id="Email Address:input" type="text" name="email" value="" maxlength="80" placeholder="Email Address" class="footer-signup"></p>
+                   <button type="submit" class="Button ctct-button Button--block Button-secondary home-main newsletter-button" data-enabled="enabled"></button>
+               </form>
+           </div>
+        </div> -->
+        <script type='text/javascript'>
+           var localizedErrMap = {};
+           localizedErrMap['required'] =    'This field is required.';
+           localizedErrMap['ca'] =      'An unexpected error occurred while attempting to send email.';
+           localizedErrMap['email'] =       'Please enter your email address in name@email.com format.';
+           localizedErrMap['birthday'] =    'Please enter birthday in MM/DD format.';
+           localizedErrMap['anniversary'] =   'Please enter anniversary in MM/DD/YYYY format.';
+           localizedErrMap['custom_date'] =   'Please enter this date in MM/DD/YYYY format.';
+           localizedErrMap['list'] =      'Please select at least one email list.';
+           localizedErrMap['generic'] =     'This field is invalid.';
+           localizedErrMap['shared'] =    'Sorry, we could not complete your sign-up. Please contact us to resolve this.';
+           localizedErrMap['state_mismatch'] = 'Mismatched State/Province and Country.';
+          localizedErrMap['state_province'] = 'Select a state/province';
+           localizedErrMap['selectcountry'] =   'Select a country';
+           var postURL = 'https://visitor2.constantcontact.com/api/signup';
+        </script>
+        <script type='text/javascript' src='https://static.ctctcdn.com/h/contacts-embedded-signup-assets/1.0.2/js/signup-form.js'></script>
+      </div>
+      <div class="col-sm-6 col-md-6 donate home-main">
+        <h4>Support The Library</h4><!--
+     --><p>Donate today and help ensure that the Library continues to evolve to meet the needs of our community.</p>
+        <a href="https://www.greenwichlibrary.org/donate/" class="button neutral" target="_blank">Donate Now</a>
+      </div>
+    </div>
+    
+    <div class="row link-row">
+      <div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="https://www.greenwichlibrary.org/faq/">Help</a></li>
+<li id="menu-item-3971" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3971"><a href="https://www.greenwichlibrary.org/forms/ask-librarian/">Contact</a></li>
+<li id="menu-item-3058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3058"><a target="_blank" rel="noopener" href="https://www.greenwichlibrary.org/donate/">Donate</a></li>
+<li id="menu-item-65" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-65"><a target="_blank" rel="noopener" href="http://visitor.r20.constantcontact.com/manage/optin?v=001g9Qimy9ZAK1bgu4jvkt84u4S2NqhPwA9DgUUN2UHBTTOgHdK6HsuWT30RYvAoWwnJSaYpO6Jj3Tz7aYINsenmHuu-c0FLTe5o3YtI3G7mg2S7ZFHHqvcfdMnM3Z5QAqBDWGFXRwXKdT91dNYxTUBfFASL4tIjN-7sGL1YDA_M0KhDVhHoZ_p8c_U9Obv2SXg3_2a1dfqqsI%3D">Newsletter</a></li>
+<li id="menu-item-3728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3728"><a href="https://www.greenwichlibrary.org/sitemap/">Sitemap</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="https://www.greenwichlibrary.org/hours-locations/">Hours &#038; Locations</a></li>
+</ul></div>      <ul class="social-footer">
+        <li><a href="https://www.facebook.com/GreenwichLibrary/" target="_blank"><img src="/wp-content/themes/greenwich-sage/assets/images/icons/social/facebook.svg" alt="Facebook Icon"></a></li>
+        <li><a href="https://twitter.com/GWLIBRARY" target="_blank"><img src="/wp-content/themes/greenwich-sage/assets/images/icons/social/twitter.svg" alt="Twitter Icon"></a></li>
+        <li><a href="https://www.google.com/maps/place/Greenwich+Library/@41.028905,-73.629477,15z/data=!4m5!3m4!1s0x0:0xaff03168a7de3b62!8m2!3d41.028905!4d-73.629477?hl=en" target="_blank"><img src="/wp-content/themes/greenwich-sage/assets/images/icons/social/google.svg" alt="G+ Icon"></a></li>
+        <li><a href="https://www.instagram.com/gwlibrary/" target="_blank"><img src="/wp-content/themes/greenwich-sage/assets/images/icons/social/instagram.svg" alt="Instagram Icon"></a></li>
+      </ul>
+    </div>
+
+    <div class="row copyright-row neutral-1">
+      <div class="copyright-logo">
+		  <a href="https://www.greenwichlibrary.org/"><img src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/images/icons/main-logo.svg" class="main-logo" alt="Greenwich Library Logo"></a>
+		  <h3 class="hidden-xs footer-logo">Greenwich Library</h3>
+		</div>
+	<div class="contact-info">
+		<div class="address">101 West Putnam Avenue<br>Greenwich, CT 06830</div>
+		<div class="phone"><span>Phone:</span> (203) 622-7900</div>
+	</div>
+      <div class="copyright">
+        <p>&#169; 2024 Greenwich Library. <a href="/greenwich-library/policies/privacy-and-confidentiality">Terms and Privacy.</a> <span class="mobile-break">Site by <a href="http://www.verbalplusvisual.com/" target="_blank">V+V</a></span></p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+		<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TVNPHRC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.2" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+/* ]]> */
+</script>
+<script type="text/javascript" id="sage/js-js-extra">
+/* <![CDATA[ */
+var sageConfig = {"ajax_url":"https:\/\/www.greenwichlibrary.org\/wp-admin\/admin-ajax.php","libcal_nonce":"882223a5ec"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/dist/scripts/main.js" id="sage/js-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.8" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/plugins/js_composer/assets/lib/vendor/node_modules/skrollr/dist/skrollr.min.js?ver=7.8" id="vc_jquery_skrollr_js-js"></script>
+<script type="text/javascript" id="bibliocommons-js-extra">
+/* <![CDATA[ */
+var ajax_url = "https:\/\/www.greenwichlibrary.org\/wp-admin\/admin-ajax.php";
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/scripts/bibliocommons.js?ver=6.5.5" id="bibliocommons-js"></script>
+<script type="text/javascript" src="https://www.greenwichlibrary.org/wp-content/themes/greenwich-sage/assets/scripts/blog.js?ver=6.5.5" id="blog-js"></script>
+<script></script>    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56fd5497b46a3f75"></script>
+	  
+	<!-- GOOGLE ANALYTICS -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-GCX8Q0YMKM"></script>
+	 <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-GCX8Q0YMKM');
+	 </script>
+    <!-- END GOOGLE ANALYTICS -->
+  </body>
 </html>

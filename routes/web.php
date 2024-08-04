@@ -34,6 +34,7 @@ Route::get('/anggota/edit/{id}', 'App\Http\Controllers\AnggotaController@edit')-
 Route::put('/anggota/update/{id}', 'App\Http\Controllers\AnggotaController@update')->name('anggota.update');
 Route::delete('/anggota/delete/{id}', 'App\Http\Controllers\AnggotaController@destroy')->name('anggota.destroy');
 
+
 Route::get('/peminjaman', 'App\Http\Controllers\PeminjamanController@index')->name('peminjaman.index');
 Route::get('/peminjaman/create', 'App\Http\Controllers\PeminjamanController@create')->name('peminjaman.create');
 Route::post('/peminjaman/store', 'App\Http\Controllers\PeminjamanController@store')->name('peminjaman.store');
